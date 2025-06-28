@@ -9,8 +9,8 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0">
                         <Link to="/" className="flex items-center">
                             <img
-                                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                                className="mr-3 h-16"
+                                src="logo.png"
+                                className="mr-3 h-35"
                                 alt="Logo"
                             />
                         </Link>
@@ -35,14 +35,14 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    {/* <a
-                                        href="https://github.com/hiteshchoudhary"
+                                    <a
+                                        href="https://github.com/Animesh0706?tab=repositories"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
                                         Github
-                                    </a> */}
+                                    </a>
                                 </li>
                                 <li>
                                     <Link to="/" className="hover:underline">
@@ -68,17 +68,17 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+                <hr className="my-4 border-gray-200 sm:mx-auto lg:my-3" />
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2025
-                        {/* <a href="https://hiteshchoudhary.com/" className="hover:underline">
-                            animeshsingh
-                        </a> */}
+                        <a href="https://www.instagram.com/animeshsingh_18/" className="hover:underline">
+                           .  Animesh Singh
+                        </a>
                         . All Rights Reserved.
                     </span>
                     <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                        <Link to="#" className="text-gray-500 hover:text-gray-900">
+                        <Link to="#" className="text-gray-500">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
