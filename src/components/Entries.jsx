@@ -11,7 +11,7 @@ function AddEntries() {
 
     const handleChanges = () => {
         const newEntry = {
-            id: Date.now(),
+            id: Date.now().toString(),
             title: heading,
             contents: entry,
             date: new Date().toISOString()

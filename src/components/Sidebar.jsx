@@ -10,7 +10,7 @@ function Sidebar() {
             <div className="h-32">
                 <Link to="/" className="i">
                     <img
-                        src="logo.png"
+                        src="/logo.png"
                         className=" h-24 "
                         alt="Logo"
                     />
@@ -36,6 +36,7 @@ function Sidebar() {
                     Add Entry
                 </NavLink>
             </div>
+            
             <div>
                 <NavLink
                     to="/about"

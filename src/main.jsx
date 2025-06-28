@@ -11,24 +11,13 @@ import About from './components/About.jsx'
 
 
 
-
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route>
-//       <Route path='/' element={<Home />} />
-//       <Route path='/new' element={<AddEntries />} />
-//       <Route path='/edit/:id' element={<EditEntry />} />
-//     </Route>
-//   )
-// )
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
       <Route path='' element={<Home />} />
       <Route path='/new' element={<AddEntries />} />
       <Route path='/about' element={<About />} />
-      <Route path='edit/:editid' element={<EditEntry />} />
+      <Route path='edit/:id' element={<EditEntry />} />
     </Route>
   )
 )

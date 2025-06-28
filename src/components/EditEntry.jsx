@@ -15,28 +15,35 @@ function EditEntry() {
         const parsedData = data ? JSON.parse(data) : [];
         setStoredEntries(parsedData);
 
-        const targetEntry = parsedData.find((entry) => 
-            entry.id === Number(id)
-        );
+        const targetEntry = parsedData.find((entry) => {
+            console.log(entry.id);
+            console.log(id);
+            return entry.id === id;
+        });
 
         if (targetEntry) {
             setTitle(targetEntry.title);
             setContent(targetEntry.contents);
         }
+
+        console.log(targetEntry)
+        console.log(parsedData)
+        console.log(parsedData)
     }, [id])
 
     const handleSave = () => {
         const data = localStorage.getItem('entries');
-        
-        const updatedEntry = storedEntries.map((entry) => 
-                entry.id === Number(id)
-                ? {...entry, title, contents: content} : entry
-            );
+        const parsedData = data ? JSON.parse(data) : [];
+
+        const updatedEntry = parsedData.map((entry) =>
+            entry.id === id
+                ? { ...entry, title, contents: content } : entry
+        );
 
         localStorage.setItem('entries', JSON.stringify(updatedEntry));
         setStoredEntries(updatedEntry);
         navigate('/');
-        
+
     }
 
 
