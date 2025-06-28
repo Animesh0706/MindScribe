@@ -13,7 +13,7 @@ function JournalItem({ entry, onDelete }) {
 
             <h1 className='text-xl font-bold text-slate-800'>{entry.title}</h1>
             <p className='text-sm text-gray-500'>{new Date(entry.date).toLocaleString()}</p>
-            <p className='text-gray-700'>{entry.contents}</p>
+            <p className='text-gray-700 line-clamp-1'>{entry.contents}</p>
 
             <div className="flex gap-4 justify-end pt-2">
                 <button

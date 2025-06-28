@@ -48,23 +48,45 @@ function EditEntry() {
 
 
     return (
-        <div className='grid grid-cols-2 grid-rows-7 m-8'>
-            <h2 className='col-span-2'>Edit Journal Entry</h2>
-            <input
-                className='border-2 col-span-2 mb-2'
-                type="text"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-            />
-            <textarea
-                value={content}
-                className='border-double border-5 col-span-2 row-span-4 '
-                onChange={(e) => setContent(e.target.value)}
-            ></textarea>
+        <div className="p-6 w-full bg-neutral-100 min-h-screen text-slate-800 flex justify-center">
+            <div className="w-full max-w-3xl space-y-6">
+                <h2 className="text-2xl font-semibold text-slate-800">Edit Journal Entry</h2>
 
-            <button className='border-2 border-solid mt-2 w-50 text-center justify-self-center' onClick={() => navigate('/')}>Cancel</button>
+                <input
+                    className="w-full border border-slate-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                    type="text"
+                    value={title}
+                    placeholder="Edit Title"
+                    onChange={(e) => setTitle(e.target.value)}
+                />
 
-            <button className='border-2 border-solid mt-2 w-50 text-center justify-self-center' onClick={handleSave}>Save Changes</button>
+                <textarea
+                    value={content}
+                    className="w-full min-h-[200px] border border-slate-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                    placeholder="Edit Content"
+                    onChange={(e) => setContent(e.target.value)}
+                ></textarea>
+
+                <div className="flex gap-4 justify-end pt-2 flex-wrap">
+                    <button
+                        className="px-4 py-2 bg-gray-300 text-slate-800 rounded hover:bg-gray-400 transition"
+                        onClick={() => navigate('/')}
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        className={`px-4 py-2 rounded text-white transition ${(title.trim() === '' && content.trim() === '')
+                                ? 'bg-orange-300 cursor-not-allowed'
+                                : 'bg-orange-500 hover:bg-orange-600'
+                            }`}
+                        onClick={handleSave}
+                        disabled={title.trim() === '' && content.trim() === ''}
+                    >
+                        Save Changes
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }
