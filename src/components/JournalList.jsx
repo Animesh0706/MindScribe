@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import JournalItem from './JournalItem';
 
 
-
 function JournalList() {
     const [storedEntries, setStoredEntries] = useState([]);
 
@@ -23,6 +22,7 @@ function JournalList() {
     return (
 
         <div className="p-4 sm:p-6 w-full bg-neutral-100 min-h-screen text-slate-800">
+
             <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-center sm:text-left">
                 Your Journal Entries
             </h2>

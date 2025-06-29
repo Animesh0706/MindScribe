@@ -8,6 +8,8 @@ import AddEntries from './components/Entries.jsx'
 import Home from './components/home.jsx'
 import EditEntry from './components/EditEntry.jsx'
 import About from './components/About.jsx'
+import ExportJournal from './components/ExportJournal.jsx'
+import ToggleTheme from './components/ToggleTheme.jsx'
 
 
 
@@ -17,6 +19,8 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='/new' element={<AddEntries />} />
       <Route path='/about' element={<About />} />
+      <Route path='/toggle' element={<ToggleTheme />} />
+      <Route path='/export' element={<ExportJournal />} />
       <Route path='edit/:id' element={<EditEntry />} />
     </Route>
   )

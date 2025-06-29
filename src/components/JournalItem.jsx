@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import AddEntries from './Entries';
 import { useNavigate } from 'react-router-dom';
+import { motion } from "motion/react"
 
 
 function JournalItem({ entry, onDelete }) {
@@ -9,7 +10,16 @@ function JournalItem({ entry, onDelete }) {
 
     return (
 
-        <div className=" bg-neutral-100 p-5 rounded-xl shadow-md border border-slate-200 hover:shadow-lg transition-all space-y-3">
+        <motion.div initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{
+                opacity: { duration: 0.5 },
+                y: { duration: 0.5 },
+                scale: { duration: 0.2 } 
+            }}
+            viewport={{ once: true }}
+            className="bg-slate-200 p-5 rounded-xl shadow-md border border-slate-200  transition-all space-y-3" >
 
             <h1 className='text-xl font-bold text-slate-800'>{entry.title}</h1>
             <p className='text-sm text-gray-500'>{new Date(entry.date).toLocaleString()}</p>
@@ -30,7 +40,7 @@ function JournalItem({ entry, onDelete }) {
                 </button>
             </div>
 
-        </div>
+        </motion.div>
     );
 }
 
