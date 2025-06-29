@@ -57,12 +57,11 @@ function AddEntries() {
                     </button>
                     <button
                         onClick={handleChanges}
-                        disabled={entry.trim() === ''}
-                        className={`px-4 py-2 rounded text-white transition w-full sm:w-auto ${
-                            entry.trim() === ''
-                                ? 'bg-orange-300 cursor-not-allowed'
-                                : 'bg-orange-500 hover:bg-orange-600'
-                        }`}
+                        disabled={heading.trim() === '' || entry.trim() === ''}
+                        className={`px-4 py-2 rounded text-white transition w-full sm:w-auto ${(heading.trim() === '' || entry.trim() === '')
+                            ? 'bg-orange-300 cursor-not-allowed'
+                            : 'bg-orange-500 hover:bg-orange-600'
+                            }`}
                     >
                         Save
                     </button>

@@ -15,20 +15,15 @@ function EditEntry() {
         const parsedData = data ? JSON.parse(data) : [];
         setStoredEntries(parsedData);
 
-        const targetEntry = parsedData.find((entry) => {
-            console.log(entry.id);
-            console.log(id);
-            return entry.id === id;
-        });
+        const targetEntry = parsedData.find((entry) =>
+            entry.id === id
+        );
 
         if (targetEntry) {
             setTitle(targetEntry.title);
             setContent(targetEntry.contents);
         }
 
-        console.log(targetEntry)
-        console.log(parsedData)
-        console.log(parsedData)
     }, [id])
 
     const handleSave = () => {
@@ -76,12 +71,12 @@ function EditEntry() {
                     </button>
 
                     <button
-                        className={`px-4 py-2 rounded text-white transition ${(title.trim() === '' && content.trim() === '')
-                                ? 'bg-orange-300 cursor-not-allowed'
-                                : 'bg-orange-500 hover:bg-orange-600'
+                        disabled={title.trim() === '' || content.trim() === ''}
+                        className={`px-4 py-2 rounded text-white transition ${(title.trim() === '' || content.trim() === '')
+                            ? 'bg-orange-300 cursor-not-allowed'
+                            : 'bg-orange-500 hover:bg-orange-600'
                             }`}
                         onClick={handleSave}
-                        disabled={title.trim() === '' && content.trim() === ''}
                     >
                         Save Changes
                     </button>
