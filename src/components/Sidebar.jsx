@@ -18,7 +18,7 @@ function Sidebar() {
 
             <div className="w-full text-center">
                 <NavLink
-                    to="/"
+                    to="home"
                     className={({ isActive }) =>
                         `block py-2 duration-200 
                         ${isActive ? "text-orange-400" : "text-gray-200"} 
@@ -30,7 +30,7 @@ function Sidebar() {
 
             <div className="w-full text-center">
                 <NavLink
-                    to="/new"
+                    to="new"
                     className={({ isActive }) =>
                         `block py-2 duration-200 
                         ${isActive ? "text-orange-400" : "text-gray-200"} 
@@ -42,7 +42,7 @@ function Sidebar() {
 
             <div className="w-full text-center">
                 <NavLink
-                    to="/about"
+                    to="about"
                     className={({ isActive }) =>
                         `block py-2 duration-200  
                         ${isActive ? "text-orange-400" : "text-gray-200"} 
@@ -59,7 +59,7 @@ function Sidebar() {
 
             <div className="w-full text-center">
                 <NavLink
-                    to="/toggle"
+                    to="toggle"
                     className={({ isActive }) =>
                         `block py-2 duration-200 
                         ${isActive ? "text-orange-400" : "text-gray-200"} 
@@ -71,7 +71,7 @@ function Sidebar() {
 
             <div className="w-full text-center">
                 <NavLink
-                    to="/export"
+                    to="export"
                     className={({ isActive }) =>
                         `block py-2 duration-200  
                         ${isActive ? "text-orange-400" : "text-gray-200"} 

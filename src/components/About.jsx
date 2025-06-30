@@ -10,7 +10,7 @@ function About() {
                 style={{
                     scaleX: scrollYProgress,
                 }}
-                className='bg-orange-400 w-full h-3 fixed origin-left top-0 left-64 '
+                className='bg-orange-400 w-full h-3 fixed origin-left top-0 lg:left-64 left-0'
             >
             </motion.div>
             <div className="max-w-3xl w-full space-y-6">

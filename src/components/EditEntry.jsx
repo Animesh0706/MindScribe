@@ -37,7 +37,7 @@ function EditEntry() {
 
         localStorage.setItem('entries', JSON.stringify(updatedEntry));
         setStoredEntries(updatedEntry);
-        navigate('/');
+        navigate('home');
 
     }
 
@@ -65,7 +65,7 @@ function EditEntry() {
                 <div className="flex gap-4 justify-end pt-2 flex-wrap">
                     <button
                         className="px-4 py-2 bg-gray-300 text-slate-800 rounded hover:bg-gray-400 transition"
-                        onClick={() => navigate('/')}
+                        onClick={() => navigate('home')}
                     >
                         Cancel
                     </button>

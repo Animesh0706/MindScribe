@@ -10,21 +10,25 @@ import EditEntry from './components/EditEntry.jsx'
 import About from './components/About.jsx'
 import ExportJournal from './components/ExportJournal.jsx'
 import ToggleTheme from './components/ToggleTheme.jsx'
+import Intro from './components/Intro.jsx'
 
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout />}>
-      <Route path='' element={<Home />} />
-      <Route path='/new' element={<AddEntries />} />
-      <Route path='/about' element={<About />} />
-      <Route path='/toggle' element={<ToggleTheme />} />
-      <Route path='/export' element={<ExportJournal />} />
-      <Route path='edit/:id' element={<EditEntry />} />
-    </Route>
+    <>
+      <Route path='/' element={<Intro />} />
+      <Route path='/journal' element={<Layout />}>
+        <Route path='home' element={<Home />} />
+        <Route path='new' element={<AddEntries />} />
+        <Route path='about' element={<About />} />
+        <Route path='toggle' element={<ToggleTheme />} />
+        <Route path='export' element={<ExportJournal />} />
+        <Route path='edit/:id' element={<EditEntry />} />
+      </Route>
+    </>
   )
-)
+);
 
 
 
