@@ -34,7 +34,7 @@ function JournalItem({ entry, onDelete }) {
                 </button>
                 <button
                     className="px-4 py-1 border border-orange-500 text-orange-500 rounded hover:bg-orange-100 transition"
-                    onClick={() => navigate(`edit/${entry.id}`)}
+                    onClick={() => navigate(`/journal/edit/${entry.id}`)}
                 >
                     Edit
                 </button>

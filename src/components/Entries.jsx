@@ -22,7 +22,7 @@ function AddEntries() {
 
         localStorage.setItem('entries', JSON.stringify(updatedEntry));
 
-        navigate('home');
+        navigate('/journal/home');
 
 
     }
@@ -50,7 +50,7 @@ function AddEntries() {
 
                 <div className="flex flex-col sm:flex-row justify-end gap-3 pt-2">
                     <button
-                        onClick={() => navigate('home')}
+                        onClick={() => navigate('/journal/home')}
                         className="px-4 py-2 border border-slate-300 text-slate-700 rounded hover:bg-slate-100 transition w-full sm:w-auto"
                     >
                         Cancel
